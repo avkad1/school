@@ -78,29 +78,8 @@ function updateDocument(dbName, collectionName, filterQuery, newDocument) {
   });
 }
 
-function deleteDocument(dbName, collectionName, filterQuery) {
-  return new Promise((resolve, reject) => {
-    mongoClient.connect(BASE_URL, clientOptions, (err, client) => {
-      if (err) {
-        reject(err);
-      } else {
-        var db = client.db(dbName);
-        db.collection(collectionName).deleteMany(filterQuery, (err, result) => {
-          if (err) {
-            client.close();
-            reject(err);
-          }
-          client.close();
-          resolve(result);
-        });
-      }
-    });
-  });
-}
-
 module.exports = {
   get: getDocuments,
   insert: insertDocument,
-  update: updateDocument,
-  delete: deleteDocument
+  update: updateDocument
 };
