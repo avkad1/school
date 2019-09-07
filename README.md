@@ -1,4 +1,4 @@
-# Project Title
+# SCHOOL
 
 School Project designed as per requirements from SpringRole.
 
