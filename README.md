@@ -51,6 +51,11 @@ What things you need to install the software and how to install them
 
 ## Installing and Running the application.
 
+Clone this project using the below command:
+```
+    git clone https://github.com/avkad1/school.git
+```
+
 The project has 3 directories: client, server, and db.
 
 From the `db` directory, start the mongo server using the following command in a terminal window:
